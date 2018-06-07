@@ -17,5 +17,5 @@ fi
 if [ $change2 -eq 0 ]; then
   cp index1.html index.html
 fi
-docker build -t ndgit/hello:next .
-docker push ndgit/hello:next
+docker $(docker-machine config test) build -t ndgit/hello:next .
+docker $(docker-machine config test) push ndgit/hello:next
